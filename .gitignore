@@ -1,61 +1,31 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
-# Common ignores
 *~
 *.sw[mnpcod]
-*.log
+.tmp
 *.tmp
 *.tmp.*
-*.sublime-project
-*.sublime-workspace
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
 UserInterfaceState.xcuserstate
 $RECYCLE.BIN/
-npm-debug.log*
-lerna-debug.log
 
-# Dependency and build folders
-/node_modules
-/www
-/dist
-/platforms
-/plugins
-/coverage
-/.ionic
-/.sass-cache
+*.log
+log.txt
+
+
 /.sourcemaps
 /.versions
-/tmp
-/temp
+/coverage
 
-# Capacitor specific
-# The native platform folders are source assets, not build assets, so they should be committed.
-# The *build* artifacts within them should be ignored.
+# Ionic
+/.ionic
+/www
+/platforms
+/plugins
 
-# Android build artifacts (inside the android platform folder)
-android/build/
-android/.gradle/
-android/app/build/
-android/app/src/main/assets/capacitor.config.json # Generated file
-android/local.properties
-android/captures/
-android/.navigation/
-android/*.iml
-
-# iOS build artifacts (inside the ios platform folder)
-ios/build/
-ios/Pods/
-ios/Podfile.lock
-ios/*.xcworkspace
-ios/*.xcuserdatad/
-ios/capacitor-cordova-android-plugins # Can be regenerated during build
-
-# Keystore files (sensitive)
-*.keystore
+# Platforms
+/android
+/ios
 
 # Compiled output
 /dist
@@ -63,35 +33,42 @@ ios/capacitor-cordova-android-plugins # Can be regenerated during build
 /out-tsc
 /bazel-out
 
-# Node dependencies
+# Node
 /node_modules
 npm-debug.log
 yarn-error.log
-.pnpm-store
 
 # IDEs and editors
-/.idea
+.idea/
 .project
 .classpath
 .c9/
 *.launch
 .settings/
+*.sublime-project
 *.sublime-workspace
-.history/
-.ionide/
 
-# IDE - VSCode
+# Visual Studio Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.history/*
 
-# Environment
-.env
-.env.local
 
-# System Files
+# Miscellaneous
+/.angular
+/.angular/cache
+.sass-cache/
+/.nx
+/.nx/cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
 .DS_Store
 Thumbs.db
-.angular/
