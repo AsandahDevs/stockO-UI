@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  stock-o-api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - '3000:3000'
+    environment:
+      - PORT=3000 # Or any other port you want the application to listen on inside the container
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules # anonymous volume to prevent host node_modules from overwriting container's
+    command: npm run start:dev
